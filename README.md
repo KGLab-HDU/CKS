@@ -1,6 +1,6 @@
 
 
-# Random Walk based Key-members Finding over Large Homogeneous Graphs
+# Random Walk-based Community Key-members Search over Large Graphs
 
 ## 1 Introduction 
 
@@ -16,6 +16,8 @@ We evaluate 4 exact algorithms: Exact-TD-bottomup, Exact-TD-topdown, Exact-AccTD
 | Exact-TD-topdown  | [*VLDB*](http://vldb.org/pvldb/vol5/p812_jiawang_vldb2012.pdf),   Truss Decomposition in Massive Networks | 2012 |
 | Exact-AccTD       | [*VLDB*](http://www.vldb.org/pvldb/vol13/p1751-che.pdf),   Accelerating Truss Decomposition on Heterogeneous  Processors | 2020 |
 | Exact-TCP-Index   | [*SIGMOD*](https://dl.acm.org/doi/pdf/10.1145/2588555.2610495),  Querying K-truss  Community in Large and Dynamic Graphs | 2014 |
+| BC                | [*ICDE*](https://drive.google.com/file/d/1T6w0tJD92mP1iruEEyGCtNiA0WT4VsQw/view?usp=drive_link), Bring order into the samples: A novel scalable method for influence maximization | 2017 |
+| IM                | [*CIKM*](https://dl.acm.org/doi/pdf/10.1145/3132847.3133126), Identifying top-k influential nodes in networks | 2017 |
 
 We provide 5 versions of our own methods: RW-B (basic random walk-based algorithm), RW-AS (random walk with optimization of average support), RW-Skew (random walk with optimization of support skewness), RW-TB (random walk with optimization of trussness bound), RW-TB- RF (RW-TB with approximate result refinement).
 
@@ -63,6 +65,11 @@ Exact-TD-topdown: java -cp CCNQ.jar Baseline TopDown < dataset_name > <query_nod
 Exact-AccTD: java -cp CCNQ.jar Baseline ATD < dataset_name > <query_node>
 
 Exact-TCP-Index: java -cp CCNQ.jar Index TCP < dataset_name > <query_node>
+
+BC: java -cp CKS.jar org.exec.BC < dataset_name > < query_node >
+
+IM: java -cp CKS.jar org.exec.IM < dataset_name > < query_node > < iteration_count > < probability >
+
 ```
 
 For example:
@@ -89,18 +96,18 @@ runtime: 4637 (ms)
 
 ### 5.2 Our Method
 
-We give 5 versions of random walk-based methods, the numbers and corresponding algorithms are RW-B corresponding to 0, RW-AS corresponding to 1, RW-Skew corresponding to 2, RW-TB corresponding to 3, RW-TB- RF corresponds to 4. Besides, *bound* indicates the size of m-bounded subgraph mentioned in Sec-4.1, and top-*n* is the number of returned key-members.
+We give 5 versions of random walk-based methods, the numbers and corresponding algorithms are <font color=Blue>RW-B corresponding to 0</font>, <font color=Blue>RW-AS corresponding to 1</font>, <font color=Blue>RW-Skew corresponding to 2</font>, <font color=Blue>RW-TB corresponding to 3</font>, <font color=Blue>RW-TB- RF corresponds to 4</font>. Besides, *bound* indicates the size of m-bounded subgraph mentioned in Sec-4.1, and top-*n* is the number of returned key-members.
 
 ```
-RW-B: java -cp CCNQ.jar MyApproximate Mymethod  < dataset_name > 0 <query_node> <bound> <top-n>
+java -cp CCNQ.jar MyApproximate Mymethod  < dataset_name > 0 <query_node> <bound> <top-n>
 
-RW-AS: java -cp CCNQ.jar MyApproximate Mymethod < dataset_name > 1 <query_node> <bound> <top-n>
+java -cp CCNQ.jar MyApproximate Mymethod < dataset_name > 1 <query_node> <bound> <top-n>
 
-RW-Skew: java -cp CCNQ.jar MyApproximate Mymethod < dataset_name > 2 <query_node> <bound> <top-n>
+java -cp CCNQ.jar MyApproximate Mymethod < dataset_name > 2 <query_node> <bound> <top-n>
 
-RW-TB: java -cp CCNQ.jar MyApproximate Mymethod < dataset_name > 3 <query_node> <bound> <top-n>
+java -cp CCNQ.jar MyApproximate Mymethod < dataset_name > 3 <query_node> <bound> <top-n>
 
-RW-TB-RF: java -cp CCNQ.jar MyApproximate Mymethod < dataset_name > 4 <query_node> <bound> <top-n>
+java -cp CCNQ.jar MyApproximate Mymethod < dataset_name > 4 <query_node> <bound> <top-n>
 ```
 
 
