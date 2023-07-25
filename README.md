@@ -1,6 +1,6 @@
 
 
-<div align='center' ><font size= 6>Random Walk based Key-members Finding over Large Homogeneous Graphs</font></div>
+# Random Walk based Key-members Finding over Large Homogeneous Graphs
 
 ## 1 Introduction 
 
@@ -37,7 +37,7 @@ The experiments have been run on a Linux server with a Intel(R) Core(TM) i9-1090
 
 ## 4 Datasets
 
-Our experiment involves four [*datasets*](https://github.com/Lsyhprum/WEAVESS/tree/dev/dataset) popularly deployed by existing works. Each dataset represents a homogeneous graph, and each row represents information about an edge, in the form of dot-space-dot.
+Our experiment involves four [*datasets*](https://github.com/SheepYang523/CKS_Datasets) popularly deployed by existing works. Each dataset represents a homogeneous graph, and each row represents information about an edge, in the form of dot-space-dot.
 
 Example of the dateset(Facebook)
 
