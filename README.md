@@ -29,7 +29,6 @@ We provide 5 versions of our own methods: RW-B (basic random walk-based algorith
 | RW-AS     | Random  walk with optimization of average support  | Sec-4.2 |
 | RW-Skew   | Random  walk with optimization of support skewness | Sec-4.3 |
 | RW-TB     | Random  walk with optimization of trussness bound  | Sec-4.4 |
-| RW-TB-RF  | RW-TB  with approximate result refinement          | Sec-5.1 |
 
 ## 3 Requirements
 
