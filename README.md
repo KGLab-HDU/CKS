@@ -4,7 +4,7 @@
 
 ## 1 Introduction 
 
-This is a description of the code used for the experiments described in the paper titled  *Random Walk-based Community Key-members Search over Large Graphs*. The code is available at [4open.science](https://anonymous.4open.science/r/Random-Walk-based-Key-members-Finding-over-Large-Homogeneous-Graphs-1C7C/README.md).
+This is a description of the code used for the experiments described in the paper titled  *Random Walk-based Community Key-members Search over Large Graphs*.
 
 We evaluate 4 exact algorithms: Exact-TD-bottomup, Exact-TD-topdown, Exact-AccTD, and Exact-TCP-Index, based on several representative truss decomposition algorithms, i.e., TD-bottomup, TD-topdown, AccTD, and TCP index. The source and publication year of their paper are given in Table 1.
 
